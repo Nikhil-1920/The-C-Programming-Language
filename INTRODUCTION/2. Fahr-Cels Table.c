@@ -10,14 +10,14 @@ int main(void) {
 	upper = 300;	    /* upper limit of temperature table */
 	step = 20;	   /* size of step*/
 
-    printf("Fahr\tCels\n");
-
-	fahr = lower;
+        fahr = lower;
+        
+        printf("Fahr\tCels\n");
 	while(fahr <= upper) {
 		cels = 5 * (fahr-32) / 9;
 		printf("%3d\t%3d\n", fahr, cels);
 		fahr = fahr + step;
 	}
-    return 0;
+        return 0;
 }
 
