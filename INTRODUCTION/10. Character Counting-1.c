@@ -5,8 +5,8 @@ int main(void) {
 	long nc = 0;
 
 	while(getchar() != EOF) {
-        ++nc;
-    }
-    printf("%ld\n", nc);
-    return 0;
+            ++nc;
+        }
+        printf("%ld\n", nc);
+        return 0;
 }
