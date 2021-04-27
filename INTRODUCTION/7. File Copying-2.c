@@ -6,6 +6,6 @@ int main(void) {
 
 	while((c = getchar()) != EOF) {
 		putchar(c);
-    }
-    return 0;
+        }
+        return 0;
 }
