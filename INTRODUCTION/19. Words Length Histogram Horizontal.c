@@ -9,13 +9,13 @@ int main(void) {
 	int count[999];
 	int i, c, j;
 
-    length = 0;
+    	length = 0;
 	max = 0;
 	state = OUT;
 
 	for(i = 0; i < 999; ++i) {
 		count[i] = 0;
-    }
+        }
 	
 	while((c = getchar()) != EOF) {
 		if(c == ' ' || c == '\n' || c == '\t') {
