@@ -16,7 +16,8 @@ int main(void) {
 		else if(c == '\n') {
 			nl++;
 		}
-	 }
-	 printf("sapce: %d\ntab: %d\nnew line: %d\n", space, tab, nl);
-     return 0;
+	}
+	
+	printf("sapce: %d\ntab: %d\nnew line: %d\n", space, tab, nl);
+     	return 0;
 }
