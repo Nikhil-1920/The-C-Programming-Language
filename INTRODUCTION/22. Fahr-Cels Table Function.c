@@ -10,7 +10,7 @@ int main(void) {
 	int lower, upper, step;
 
 	lower = 0;	    /* Lower Limit Of Temperature Table */
-	upper = 300;	/* Upper Limit */
+	upper = 300;	    /* Upper Limit */
 	step  = 20;	    /* Step Size */
 
 	fahr = lower;
