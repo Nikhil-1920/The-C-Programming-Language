@@ -1,4 +1,4 @@
-// Function On Arrays
+// Functions On Array
 #include <stdio.h>
 
 int main(void) {
