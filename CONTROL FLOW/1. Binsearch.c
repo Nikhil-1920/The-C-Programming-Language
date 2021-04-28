@@ -10,12 +10,12 @@ int main(void) {
 	clock_t start, finish;
 	int i, v[ARRAY_LEN];
 	for(i = 0; i < ARRAY_LEN; i++)
-      v[i] = i;
+      		v[i] = i;
 
 	start = clock();
 	int p;
 	for(i = 0; i < ARRAY_LEN; i++) {
-      p = binsearch(i, v, ARRAY_LEN);
+      		p = binsearch(i, v, ARRAY_LEN);
 	}
 
 	finish = clock();
@@ -23,18 +23,18 @@ int main(void) {
 
 	start = clock();
 	for(i = 0; i < ARRAY_LEN; i++) {
-      p = binsearchFast(i, v, ARRAY_LEN);
+      		p = binsearchFast(i, v, ARRAY_LEN);
 	}
 
 	finish = clock();
 	printf("binsearchFast duration : %f\n", ((double)(finish - start)) / CLOCKS_PER_SEC);
 
 	for(i = -10000; i < ARRAY_LEN; i++) {
-      p = binsearchFast(i, v, ARRAY_LEN);
-      if(i < 0 && p != -1)
-          break;
-      else if(i >= 0 && p != i)
-          break;
+		p = binsearchFast(i, v, ARRAY_LEN);
+		if(i < 0 && p != -1)
+			break;
+		else if(i >= 0 && p != i)
+			break;
 	}
   
 	printf("i : %d\n", i);
@@ -48,13 +48,13 @@ int binsearch(int x, int v[], int n) {
 	low = 0;
 	high = n - 1;
 	while(low <= high) {
-      mid = (low + high) / 2;
-      if (x < v[mid])
-          high = mid - 1;
-      else if (x > v[mid])
-          low = mid + 1;
-      else
-          return mid;
+	      mid = (low + high) / 2;
+	      if(x < v[mid])
+		  high = mid - 1;
+	      else if (x > v[mid])
+		  low = mid + 1;
+	      else
+		  return mid;
 	}
 	return -1;
 }
@@ -65,25 +65,24 @@ int binsearchFast(int x, int v[], int n) {
 	low = 0;
 	high = n - 1;
 	while(low <= high) {
-      mid = (low + high) / 2;
-
-      if(x <= v[mid])
-          high = mid - 1;
-      else
-          low = mid + 1;
+	      mid = (low + high) / 2;
+	      if(x <= v[mid])
+		  high = mid - 1;
+	      else
+		  low = mid + 1;
 	}
 
 	if(x == v[mid])
-	    return mid;
+		return mid;
 	else if(x > v[mid])
-	    mid += 1;
+		mid += 1;
 	else
-	    mid -= 1;
+		mid -= 1;
 
 	if(mid < 0 || mid > n - 1)
-		  return -1;
+		return -1;
 	else
-		  return mid;
+		return mid;
 }
 
 	
