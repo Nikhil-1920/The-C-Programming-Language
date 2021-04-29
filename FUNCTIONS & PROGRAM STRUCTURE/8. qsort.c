@@ -1,3 +1,4 @@
+// Quick sort implementation
 #include <stdio.h>
 #define ARR_LEN 7
 
