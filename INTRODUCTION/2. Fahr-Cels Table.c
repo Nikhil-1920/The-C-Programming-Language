@@ -6,9 +6,9 @@ int main(void) {
 	int lower, upper;
 	int step;
 
-	lower = 0;	     /* lower limit of temperature table */
+	lower = 0;	    /* lower limit of temperature table */
 	upper = 300;	    /* upper limit of temperature table */
-	step = 20;	   /* size of step*/
+	step  = 20;	    /* size of step*/
 
         fahr = lower;
         
