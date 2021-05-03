@@ -1,4 +1,4 @@
-// alloc implementation
+// alloc() implementation
 #include <stdio.h>
 #include <stddef.h>
 
