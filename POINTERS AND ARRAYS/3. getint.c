@@ -1,4 +1,4 @@
-// getint implementation
+// getint() implementation
 #include <stdio.h>
 #include <ctype.h>
 
