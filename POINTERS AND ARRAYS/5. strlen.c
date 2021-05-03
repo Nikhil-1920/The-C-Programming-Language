@@ -1,4 +1,4 @@
-// strlen implementation
+// strlen() implementation
 #include <stdio.h>
 
 int strlen(const char *s);
