@@ -1,4 +1,4 @@
-// getfloat implementation
+// getfloat() implementation
 #include <stdio.h>
 #include <ctype.h>
 
