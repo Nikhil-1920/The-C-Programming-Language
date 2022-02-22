@@ -1,24 +1,38 @@
-// Fahrenheit-Celsius Table
+/*  Q.3. Modify the temperature conversion program 
+    to print a heading above the table.
+*/
+
+// Author: Nikhil Singh
+// Last Modified: 20/02/2022
+
+
 #include <stdio.h>
 
+// Function to display red color text
+void redColor(void) { printf("\033[0;91m"); }
+
+
 int main(void) {
-	
-	int fahr, cels;
-	int lower, upper;
-	int step;
 
-	lower = 0;	    /* lower limit of temperature table */
-	upper = 300;	    /* upper limit of temperature table */
-	step  = 20;	    // size of step
-	
-        fahr = lower;
-        
-        printf("Fahr\tCels\n");
-	while(fahr <= upper) {
-		cels = 5 * (fahr - 32) / 9;
-		printf("%3d\t%3d\n", fahr, cels);
-		fahr = fahr + step;
-	}
-        return 0;
+    float fahr, cels;
+    int upper, lower;
+    int step;
+
+    lower = 0;              // lower limit 
+    upper = 300;            // upper limit
+    step = 20;              // steps size
+
+    redColor();
+    printf("\n--------------\n");
+    printf("| Fahr\tCels |");
+    printf("\n--------------\n");
+
+    fahr = lower;
+    while(fahr <= upper) {
+
+        cels = (5.0 / 9.0) * (fahr - 32);
+        printf("%3.0f\t%05.1f\n", fahr, cels);
+        fahr += step;
+    }
+    return 0;
 }
-
