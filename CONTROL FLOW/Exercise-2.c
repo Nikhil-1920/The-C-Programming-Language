@@ -114,6 +114,7 @@ void unescape(char s[], char t[]) {
         switch(t[i]) {
 
             case '\\':
+                
                 // Escape sequence found, translating...
                 switch(t[++i]) {
 
@@ -156,16 +157,16 @@ void unescape(char s[], char t[]) {
                     default:
                         s[j++] = '\\';
                         s[j] = t[i];
-
                 }
+                
                 break;
 
             default:
                 s[j] = t[i];
         }
+        
         i++;
         j++;
-
     }
 
     // Copying null character
