@@ -1,11 +1,11 @@
-/*  Q.11. How would you test the word count program? What kinds 
-    of input are most likely to uncover bugs if there are any?
+/*  How would you test the word count program? What kinds of input are most likely to uncover bugs if there are any?
 */
 
 // Author: Nikhil Singh
 // Last Modified: 22/02/2022
 
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
 
@@ -34,8 +34,7 @@ int main(void) {
     // Input file containing one huge word without newline
     fptr = fopen("test2", "w");
     assert(fptr != NULL);
-    for(i = 0; i < (66000ul / 26 + 1); i++)
-        fputs(alphab, fptr);
+    for(i = 0; i < (66000ul / 26 + 1); i++) { fputs(alphab, fptr); }
     
     fclose(fptr);
 
@@ -43,8 +42,7 @@ int main(void) {
     // Input file containing different kinds of spaces
     fptr = fopen("test3", "w");
     assert(fptr != NULL);
-    for(i = 0; i < (66000ul / 4 + 1); i++)
-        fputs(spaces, fptr);
+    for(i = 0; i < (66000ul / 4 + 1); i++) { fputs(spaces, fptr); }
     
     fclose(fptr);
 
@@ -53,9 +51,7 @@ int main(void) {
     fptr = fopen("test4", "w");
     assert(fptr != NULL);
     fputs("sequoia", fptr);
-    
-    for(i = 0; i < (66000ul / 26 + 1); i++)
-        fputs(spaces, fptr);
+    for(i = 0; i < (66000ul / 26 + 1); i++) { fputs(spaces, fptr); }
     
     fputs("sequoia", fptr);
     fclose(fptr);
@@ -64,8 +60,7 @@ int main(void) {
     // Input files contains 66000 newlines
     fptr = fopen("test5", "w");
     assert(fptr != NULL);
-    for(i = 0; i < 66000ul; i++)
-        fputs("\n", fptr);
+    for(i = 0; i < 66000ul; i++) { fputs("\n", fptr); }
     
     fclose(fptr);
 
@@ -73,8 +68,7 @@ int main(void) {
     // Input files contains 66000 single letter words
     fptr = fopen("test6", "w");
     assert(fptr != NULL);
-    for(i = 0; i < 1000; i++)
-        fputs(alpha5, fptr);
+    for(i = 0; i < 1000; i++) { fputs(alpha5, fptr); }
     
     fclose(fptr);
 
@@ -82,10 +76,8 @@ int main(void) {
     // Input files contains 66000 words without newline
     fptr = fopen("test7", "w");
     assert(fptr != NULL);
-    for(i = 0; i < 66000ul; i++)  
-        fputs("sequoia", fptr);
+    for(i = 0; i < 66000ul; i++) { fputs("sequoia", fptr); }
 
     fclose(fptr);
-
     return 0;
 }
