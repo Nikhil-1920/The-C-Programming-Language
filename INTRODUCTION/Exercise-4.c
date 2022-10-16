@@ -1,5 +1,4 @@
-/*  Q.4. Write a program to print the corresponding 
-    Celsius to Fahrenheit table.
+/*  Write a program to print the corresponding Celsius to Fahrenheit table.
 */
 
 // Author: Nikhil Singh
@@ -34,5 +33,6 @@ int main(void) {
         printf("%3.0f\t%05.1f\n", cels, fahr);
         cels += step;
     }
+    
     return 0;
 }
