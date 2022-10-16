@@ -1,5 +1,4 @@
-/*  Q.15. Rewrite the temperature conversion program of section 1.2 
-    to use a function for conversion.
+/*  Rewrite the temperature conversion program of section 1.2 to use a function for conversion.
 */
 
 // Author: Nikhil Singh
@@ -47,11 +46,14 @@ void tempConvertorX(void) {
             printf("\n--------------\n");
             printf("| Fahr\tCels |");
             printf("\n--------------\n");
+            
             while(temp <= upper) {
+                
                 float cels = (5.0 * (temp - 32) / 9.0);
                 printf("%3.0f\t%05.1f\n", temp, cels);
                 temp += steps;
             }
+            
             printf("\n");
             break;
 
@@ -59,11 +61,14 @@ void tempConvertorX(void) {
             printf("\n--------------\n");
             printf("| Cels\tFahr |");
             printf("\n--------------\n");
+            
             while(temp <= upper) {
+                
                 float fahr = (9.0 / 5.0) * temp + 32;
                 printf("%3.0f\t%05.1f\n", temp, fahr);
                 temp += steps;
             }
+            
             printf("\n");
             break;
         
