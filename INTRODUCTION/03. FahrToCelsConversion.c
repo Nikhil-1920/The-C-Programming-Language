@@ -1,5 +1,4 @@
-/*  Q.3. Modify the temperature conversion program 
-    to print a heading above the table.
+/*  Modify the temperature conversion program to print a heading above the table.
 */
 
 // Author: Nikhil Singh
@@ -34,5 +33,6 @@ int main(void) {
         printf("%3.0f\t%05.1f\n", fahr, cels);
         fahr += step;
     }
+    
     return 0;
 }
