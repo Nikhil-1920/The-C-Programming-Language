@@ -1,6 +1,4 @@
-/*  Q.9. Write a program to copy its input to its output, 
-    replacing each string of one or more blanks by a single 
-    blank.
+/*  Write a program to copy its input to its output, replacing each string of one or more blanks by a single blank.
 */
 
 // Author: Nikhil Singh
@@ -16,12 +14,15 @@ int main(void) {
     while((current = getchar()) != EOF) {
 
         if(current == ' ') {
-            if(previous != current) putchar(current);
+            
+            if(previous != current) { putchar(current); }
         }
-        if(current != ' ') putchar(current);
+        
+        if(current != ' ') { putchar(current); }
 
         // Following current character
         previous = current;
     }
+    
     return 0;
 }
