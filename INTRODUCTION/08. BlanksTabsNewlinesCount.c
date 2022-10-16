@@ -1,4 +1,4 @@
-/*  Q.8. Write a program to count blanks, tabs, and newlines.  */
+/*  Write a program to count blanks, tabs, and newlines.  */
 
 // Author: Nikhil Singh
 // Last Modified: 20/02/2022
@@ -8,15 +8,16 @@
 
 int main(void) {
 
-    int blanks = 0;
-    int tabs = 0;
+    int blanks  = 0;
+    int tabs    = 0;
     int newline = 0;
 
     char ch;
     while((ch = getchar()) != EOF) {
-        if(ch == '\n') newline++;
-        if(ch == '\t') tabs++;
-        if(ch == ' ') blanks++; 
+        
+        if(ch == '\n') { newline++; }
+        if(ch == '\t') { tabs++;    }
+        if(ch == ' ')  { blanks++;  }
     }
     
     printf("\nBlanks count:> %d", blanks);
